@@ -1,0 +1,329 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(175deg, #e8e8e8 0%, #f4f4f4 30%, #fafafa 70%, #ffffff 100%);
+  background-attachment: fixed;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===== 1. Hero ===== */
+.hero {
+  padding: 140px 0 100px;
+}
+
+.hero-intro {
+  margin-bottom: 80px;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.55);
+  margin-top: 12px;
+}
+
+/* Big Data Metrics */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number {
+  font-size: 88px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.metric-number small {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.metric-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.45);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+}
+
+/* ===== 2. Project Cards ===== */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-year {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.45);
+}
+
+.project-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.3);
+}
+
+.project-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.project-body p {
+  font-size: 15px;
+  color: rgba(26, 26, 26, 0.55);
+  line-height: 1.5;
+}
+
+/* ===== 3. Process Flow ===== */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.process-step {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+
+.step-num {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.25);
+  letter-spacing: 0.06em;
+}
+
+.process-step h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 12px 0 8px;
+}
+
+.process-step p {
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.5;
+}
+
+/* ===== 4 & 5. Media Grid ===== */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-placeholder {
+  aspect-ratio: 16 / 10;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(26, 26, 26, 0.2);
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.media-caption {
+  font-size: 13px;
+  color: rgba(26, 26, 26, 0.4);
+  margin-top: 10px;
+}
+
+/* ===== 6. Support Grid ===== */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.support-item {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+}
+
+.support-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.support-item p {
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.5;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 48px 0;
+}
+
+.footer p {
+  font-size: 12px;
+  color: rgba(26, 26, 26, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .metric-number {
+    font-size: 56px;
+  }
+
+  .metric-number small {
+    font-size: 28px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .project-meta {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .process-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .metric-number {
+    font-size: 42px;
+  }
+
+  .process-flow {
+    grid-template-columns: 1fr;
+  }
+}
