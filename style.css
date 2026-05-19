@@ -101,6 +101,23 @@ body {
 }
 
 /* ===== 2. Project Cards ===== */
+.work-type-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(26, 26, 26, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.work-type-desc {
+  font-size: 15px;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
 .project-list {
   display: flex;
   flex-direction: column;
@@ -148,6 +165,31 @@ body {
   font-size: 15px;
   color: rgba(26, 26, 26, 0.55);
   line-height: 1.5;
+}
+
+/* Client List */
+.client-list {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.client-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 8px;
+}
+
+.client-list span:not(.client-label) {
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.55);
 }
 
 /* ===== 3. Process Flow ===== */
