@@ -142,9 +142,10 @@ body {
   color: #1a1a1a;
 }
 
-.metric-number small {
-  font-size: 40px;
-  font-weight: 500;
+.metric-number strong {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .metric-label {
@@ -471,8 +472,8 @@ body {
     font-size: 56px;
   }
 
-  .metric-number small {
-    font-size: 28px;
+  .metric-number strong {
+    font-size: 32px;
   }
 
   .project-card {
