@@ -286,10 +286,27 @@ body {
   margin-bottom: 20px;
 }
 
-/* Project Detail */
-.project-detail {
+/* Result Row */
+.proj-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   margin-bottom: 24px;
-  max-width: 840px;
+}
+
+.proj-result-item {
+  font-size: 13px;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.6;
+}
+
+.proj-result-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(26, 26, 26, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 4px;
 }
 
 /* Dimension Cards — 关键作用 */
@@ -297,7 +314,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-bottom: 20px;
+  margin-top: 32px;
 }
 
 .dim-card {
@@ -305,6 +322,15 @@ body {
   background: rgba(255, 255, 255, 0.45);
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dim-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .dim-num {
@@ -327,27 +353,6 @@ body {
   line-height: 1.55;
   margin: 0;
   max-width: none;
-}
-
-/* Secondary Meta Row */
-.proj-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 20px;
-}
-
-.proj-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  color: rgba(26, 26, 26, 0.35);
-  line-height: 1.6;
-}
-
-.proj-meta-item svg {
-  flex-shrink: 0;
-  color: rgba(26, 26, 26, 0.2);
 }
 
 /* Image Wall */
@@ -573,7 +578,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .proj-meta-row {
+  .proj-result {
     flex-direction: column;
     gap: 4px;
   }
