@@ -148,6 +148,12 @@ body {
   letter-spacing: -0.01em;
 }
 
+.metric-number .arrow {
+  font-size: 44px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.35);
+}
+
 .metric-label {
   font-size: 12px;
   font-weight: 400;
@@ -474,6 +480,10 @@ body {
 
   .metric-number strong {
     font-size: 32px;
+  }
+
+  .metric-number .arrow {
+    font-size: 28px;
   }
 
   .project-card {
