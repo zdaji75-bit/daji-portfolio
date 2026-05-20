@@ -289,14 +289,15 @@ body {
 /* Image Wall */
 .image-wall {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
   margin-top: 4px;
 }
 
 .image-wall img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   display: block;
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.03);
@@ -514,6 +515,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .image-wall {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .media-grid {
     grid-template-columns: 1fr;
   }
@@ -543,6 +548,10 @@ body {
 
   .metric-number {
     font-size: 42px;
+  }
+
+  .image-wall {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .process-flow {
