@@ -329,8 +329,18 @@ body {
   height: auto;
   display: block;
   border-radius: 3px;
-  margin-bottom: 16px;
   background: rgba(0, 0, 0, 0.03);
+}
+
+.dim-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.dim-images img:only-child {
+  grid-column: 1 / -1;
 }
 
 .dim-num {
