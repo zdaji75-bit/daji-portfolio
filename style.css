@@ -245,66 +245,12 @@ body {
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  padding: 40px 0;
+  padding: 48px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  align-items: center;
 }
 
 .project-card:last-child {
   border-bottom: none;
-}
-
-/* Carousel */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.carousel-track {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-}
-
-.carousel-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 0;
-}
-
-.carousel-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(26, 26, 26, 0.15);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.carousel-dot.active {
-  background: rgba(26, 26, 26, 0.45);
 }
 
 .project-meta {
@@ -325,17 +271,35 @@ body {
   color: rgba(26, 26, 26, 0.3);
 }
 
-.project-body h3 {
+.project-card h3 {
   font-size: 20px;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 8px;
 }
 
-.project-body p {
+.project-card p {
   font-size: 14px;
   color: rgba(26, 26, 26, 0.5);
   line-height: 1.6;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+/* Image Wall */
+.image-wall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.image-wall img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 /* Client List */
@@ -538,8 +502,6 @@ body {
   }
 
   .project-card {
-    grid-template-columns: 1fr;
-    gap: 16px;
     padding: 32px 0;
   }
 
