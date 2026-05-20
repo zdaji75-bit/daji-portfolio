@@ -27,11 +27,11 @@ body {
 
 /* ===== 1. Hero ===== */
 .hero {
-  padding: 140px 0 100px;
+  padding: 120px 0 80px;
 }
 
 .hero-intro {
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 .name {
@@ -41,11 +41,35 @@ body {
   color: #1a1a1a;
 }
 
+.subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.35);
+  margin-top: 8px;
+}
+
 .title {
   font-size: 18px;
   font-weight: 400;
-  color: rgba(26, 26, 26, 0.55);
-  margin-top: 12px;
+  color: rgba(26, 26, 26, 0.5);
+  margin-top: 4px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tags span {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.45);
+  padding: 4px 12px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Big Data Metrics */
@@ -74,12 +98,46 @@ body {
 }
 
 .metric-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  color: rgba(26, 26, 26, 0.45);
+  color: rgba(26, 26, 26, 0.4);
   margin-top: 8px;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+/* Work Type Dual Column */
+.work-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.work-col-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(26, 26, 26, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.work-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.work-col li {
+  font-size: 14px;
+  color: rgba(26, 26, 26, 0.5);
+  line-height: 1.6;
+  padding: 4px 0;
+  padding-left: 12px;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 6px;
 }
 
 /* ===== Sections ===== */
@@ -321,7 +379,7 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 0 60px;
+    padding: 60px 0 48px;
   }
 
   .name {
@@ -330,6 +388,17 @@ body {
 
   .title {
     font-size: 15px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .work-dual {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 32px;
   }
 
   .metrics {
