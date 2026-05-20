@@ -296,8 +296,7 @@ body {
 
 .image-wall img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.03);
