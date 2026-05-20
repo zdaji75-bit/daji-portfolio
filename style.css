@@ -250,6 +250,15 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+.media-video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  outline: none;
+}
+
 .media-caption {
   font-size: 13px;
   color: rgba(26, 26, 26, 0.4);
