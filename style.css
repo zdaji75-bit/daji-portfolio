@@ -140,6 +140,11 @@ body {
   margin-bottom: 6px;
 }
 
+.work-col li strong {
+  font-weight: 600;
+  color: rgba(26, 26, 26, 0.75);
+}
+
 /* ===== Sections ===== */
 .section {
   padding: 100px 0;
