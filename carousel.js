@@ -3,6 +3,8 @@ document.querySelectorAll('.carousel').forEach(function (carousel) {
   var track = carousel.querySelector('.carousel-track');
   var slides = carousel.querySelectorAll('.carousel-slide');
   var dotsContainer = carousel.querySelector('.carousel-dots');
+  var prevBtn = carousel.querySelector('.carousel-prev');
+  var nextBtn = carousel.querySelector('.carousel-next');
   var interval = parseInt(carousel.dataset.interval) || 3000;
   var current = 0;
   var timer;
@@ -11,19 +13,32 @@ document.querySelectorAll('.carousel').forEach(function (carousel) {
   slides.forEach(function (_, i) {
     var dot = document.createElement('button');
     if (i === 0) dot.className = 'active';
-    dot.addEventListener('click', function () { goTo(i); });
+    dot.addEventListener('click', function (e) {
+      e.stopPropagation();
+      goTo(i);
+      resetTimer();
+    });
     dotsContainer.appendChild(dot);
   });
   var dots = dotsContainer.querySelectorAll('button');
 
   function goTo(index) {
-    current = index;
+    current = ((index % slides.length) + slides.length) % slides.length;
     track.style.transform = 'translateX(-' + (current * 100) + '%)';
     dots.forEach(function (d, i) { d.className = i === current ? 'active' : ''; });
   }
 
   function next() {
-    goTo((current + 1) % slides.length);
+    goTo(current + 1);
+  }
+
+  function prev() {
+    goTo(current - 1);
+  }
+
+  function resetTimer() {
+    stopTimer();
+    startTimer();
   }
 
   function startTimer() {
@@ -35,11 +50,25 @@ document.querySelectorAll('.carousel').forEach(function (carousel) {
     clearInterval(timer);
   }
 
+  // Arrow buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      prev();
+      resetTimer();
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      next();
+      resetTimer();
+    });
+  }
+
   // Click carousel → lightbox
   carousel.addEventListener('click', function (e) {
-    if (e.target.closest('.carousel-dots button')) {
-      stopTimer();
-      startTimer();
+    if (e.target.closest('.carousel-btn') || e.target.closest('.carousel-dots button')) {
       return;
     }
     var slide = carousel.querySelectorAll('.carousel-slide')[current];
