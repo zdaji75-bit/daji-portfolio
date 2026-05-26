@@ -290,23 +290,24 @@ body {
 .proj-result {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
+  gap: 12px 32px;
   margin-bottom: 24px;
 }
 
 .proj-result-item {
-  font-size: 13px;
-  color: rgba(26, 26, 26, 0.5);
-  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.7);
+  line-height: 1.5;
 }
 
 .proj-result-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  color: rgba(26, 26, 26, 0.25);
+  color: rgba(26, 26, 26, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 /* Dimension Section — 关键作用 */
@@ -350,18 +351,12 @@ body {
 }
 
 .dim-media {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  min-width: 0;
 }
 
-.dim-media img:only-child {
-  grid-column: 1 / -1;
-  max-width: 100%;
-}
-
-.dim-media-3col {
-  grid-template-columns: repeat(3, 1fr);
+.dim-media > img,
+.dim-media > .carousel + .carousel {
+  margin-top: 0;
 }
 
 .dim-media img {
@@ -370,6 +365,102 @@ body {
   display: block;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.03);
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.carousel-dots button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.carousel-dots button.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  cursor: default;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* Image Wall */
@@ -609,9 +700,6 @@ body {
     gap: 20px;
   }
 
-  .dim-media-3col {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .proj-result {
     flex-direction: column;

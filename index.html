@@ -124,12 +124,17 @@
                 <h4>二维策划 / 执行</h4>
                 <p>负责整个项目的动效策划与具体页面执行</p>
               </div>
-              <div class="dim-media dim-media-3col">
-                <img src="assets/melgeek/p4-02.png" alt="">
-                <img src="assets/melgeek/p4-03.png" alt="">
-                <img src="assets/melgeek/p4-04.png" alt="">
-                <img src="assets/melgeek/p4-05.png" alt="">
-                <img src="assets/melgeek/p4-06.png" alt="">
+              <div class="dim-media">
+                <div class="carousel" data-interval="3000">
+                  <div class="carousel-track">
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-02.png" alt=""></div>
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-03.png" alt=""></div>
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-04.png" alt=""></div>
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-05.png" alt=""></div>
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-06.png" alt=""></div>
+                  </div>
+                  <div class="carousel-dots"></div>
+                </div>
               </div>
             </div>
             <div class="dim-row">
@@ -139,8 +144,13 @@
                 <p>使用工具对外拉齐客户资料，对内将需求落实到个人</p>
               </div>
               <div class="dim-media">
-                <img src="assets/melgeek/p4-07.png" alt="">
-                <img src="assets/melgeek/p4-08.png" alt="">
+                <div class="carousel" data-interval="3000">
+                  <div class="carousel-track">
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-07.png" alt=""></div>
+                    <div class="carousel-slide"><img src="assets/melgeek/p4-08.png" alt=""></div>
+                  </div>
+                  <div class="carousel-dots"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -406,11 +416,19 @@
     </div>
   </section>
 
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img src="" alt="">
+  </div>
+
   <footer class="footer">
     <div class="container">
       <p>&copy; 2026 郑大吉</p>
     </div>
   </footer>
 
+  <script src="carousel.js"></script>
 </body>
 </html>
